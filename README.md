@@ -4,8 +4,21 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
 
 ## Links
 
+### The presentation
+
 * Slides (TODO)
 * Once the presentation is uploaded to YouTube it will be linked here.
+
+### Personal links
+
+* [My website](https://sunshowers.io/)
+* **Mastodon:** [@rain@hachyderm.io](https://hachyderm.io/@rain)
+* **Bluesky:** [@sunshowers.io](https://bsky.app/profile/sunshowers.io) --- I'm less active there but happy to answer questions if you tag me there
+* I do not have an active "X"/Twitter account.
+* Email me at rustconf2023 at sunshowers.io.
+
+### Other links
+
 * Most of the content of the talk comes from me learning about how to use signals with
   [cargo-nextest](https://nexte.st/). Nextest is a next-generation test runner for Rust with much
   faster test runs and many other features. Try it out!
