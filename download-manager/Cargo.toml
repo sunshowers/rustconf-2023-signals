@@ -1,0 +1,21 @@
+[package]
+name = "download-manager"
+version = "0.1.0"
+edition = "2021"
+license = "CC0-1.0"
+
+[dependencies]
+camino = { version = "1.1.6", features = ["serde1"] }
+clap = { version = "4.4.2", features = ["derive"] }
+color-eyre = "0.6.2"
+eyre = "0.6.8"
+fs-err = { version = "2.9.0", features = ["tokio"] }
+futures = "0.3.28"
+reqwest = { version = "0.11.20", features = ["stream"] }
+serde = { version = "1.0.188", features = ["derive"] }
+thiserror = "1.0.48"
+tokio = { version = "1.32.0", features = ["io-util", "macros", "rt", "rt-multi-thread", "signal", "sync"] }
+toml = "0.7.6"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
+url = { version = "2.4.1", features = ["serde"] }

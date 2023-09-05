@@ -1,0 +1,9 @@
+# Download all the files in this manifest with:
+#
+# cargo run --bin download-manager -- download download-manifest.toml
+
+[[downloads]]
+url = "https://releases.ubuntu.com/jammy/ubuntu-22.04.3-desktop-amd64.iso"
+
+[[downloads]]
+url = "https://download.fedoraproject.org/pub/fedora/linux/releases/38/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-38-1.6.iso"
