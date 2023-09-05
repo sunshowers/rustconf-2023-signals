@@ -6,7 +6,6 @@
 //! locking, which is outside the scope of this demo.)
 
 use std::fmt;
-
 use tokio::sync::{mpsc, oneshot};
 use url::Url;
 

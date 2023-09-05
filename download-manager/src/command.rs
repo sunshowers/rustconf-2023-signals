@@ -2,23 +2,21 @@
 //!
 //! This is where the application's main logic lives. Start reading from DownloadArgs::exec.
 
-use std::time::Duration;
-
+use crate::{
+    db::{DatabaseTask, DbWorkerHandle, DownloadState},
+    manifest::{Manifest, ManifestEntry},
+};
 use camino::{Utf8Path, Utf8PathBuf};
 use clap::{Args, Parser};
 use eyre::{Result, WrapErr};
 use futures::prelude::*;
+use std::time::Duration;
 use tokio::{
     io::AsyncWriteExt,
     sync::{broadcast, oneshot},
     time::Instant,
 };
 use url::Url;
-
-use crate::{
-    db::{DatabaseTask, DbWorkerHandle, DownloadState},
-    manifest::{Manifest, ManifestEntry},
-};
 
 #[derive(Debug, Parser)]
 pub enum App {
