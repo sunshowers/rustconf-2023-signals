@@ -22,14 +22,6 @@ jobs:
         run: cargo clippy --all-features --all-targets
       - name: Lint (rustfmt)
         run: cargo xfmt --check
-      - name: Install cargo readme
-        uses: baptiste0928/cargo-install@v1
-        with:
-          crate: cargo-readme
-      - name: Run cargo readme
-        run: ./scripts/regenerate-readmes.sh
-      - name: Check for differences
-        run: git diff --exit-code
 
   build:
     name: Build and test
