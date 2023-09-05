@@ -50,7 +50,8 @@ solutions.
 
 ## License
 
-The code in this repository was originally written by me (Rain) and is licensed under
+The code in this repository was originally written by me (Rain). Copyright has been waived to the
+greatest extent possible, as specified by
 [CC0-1.0](https://creativecommons.org/share-your-work/public-domain/cc0/). (However, note that if
 you distribute a version of the download-manager binary, the licenses of the upstream crates used
 will prevail.)
