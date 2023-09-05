@@ -211,7 +211,7 @@ async fn worker_impl(
         db_handle
             .update_state(url.clone(), DownloadState::Downloading)
             .await?;
-        let res = download_url_to(client, url.clone(), &out_path, cancel_receiver).await;
+        let res = download_url_to(client, url.clone(), out_path, cancel_receiver).await;
         match res {
             Ok(WorkerStatus::Completed) => {
                 db_handle

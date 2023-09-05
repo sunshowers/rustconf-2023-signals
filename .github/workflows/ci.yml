@@ -16,7 +16,7 @@ jobs:
       RUSTFLAGS: -D warnings
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@stable
+      - uses: dtolnay/rust-toolchain@1.72
         with:
           components: rustfmt, clippy
       - uses: Swatinem/rust-cache@v2
@@ -39,7 +39,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        rust-version: [ stable ]
+        rust-version: [ "1.72" ]
       fail-fast: false
     env:
       RUSTFLAGS: -D warnings
