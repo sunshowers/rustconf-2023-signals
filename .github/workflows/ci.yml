@@ -16,9 +16,7 @@ jobs:
       RUSTFLAGS: -D warnings
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@1.72
-        with:
-          components: rustfmt, clippy
+      - uses: dsherret/rust-toolchain-file@v1
       - uses: Swatinem/rust-cache@v2
       - name: Lint (clippy)
         run: cargo clippy --all-features --all-targets
@@ -39,15 +37,12 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
-        rust-version: [ "1.72" ]
       fail-fast: false
     env:
       RUSTFLAGS: -D warnings
     steps:
       - uses: actions/checkout@v3
-      - uses: dtolnay/rust-toolchain@master
-        with:
-          toolchain: ${{ matrix.rust-version }}
+      - uses: dsherret/rust-toolchain-file@v1
       - uses: Swatinem/rust-cache@v2
       - name: Build
         run: cargo build --all-features
