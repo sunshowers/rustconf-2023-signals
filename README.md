@@ -26,7 +26,7 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
   standard library's `Path::to_str` and `Path::display` have ever annoyed you, check out
   [camino](https://crates.io/crates/camino/) for UTF-8 paths. (The download manager demo uses camino
   for a smoother experience.)
-* Doug McIlroy's [post about signals](https://www.tuhs.org/pipermail/tuhs/2015-September/007509.html).
+* Doug McIlroy, the creator of Unix pipes, made an insightful [post about signals](https://www.tuhs.org/pipermail/tuhs/2015-September/007509.html) in 2015.
   
   > Signal() was there first and foremost to support SIGKILL; it
 did not purport to provide a sound basis for asynchronous IPC.
