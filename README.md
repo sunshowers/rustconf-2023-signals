@@ -26,6 +26,12 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
   standard library's `Path::to_str` and `Path::display` have ever annoyed you, check out
   [camino](https://crates.io/crates/camino/) for UTF-8 paths. (The download manager demo uses camino
   for a smoother experience.)
+* Doug McIlroy's [post about signals](https://www.tuhs.org/pipermail/tuhs/2015-September/007509.html).
+  
+  > Signal() was there first and foremost to support SIGKILL; it
+did not purport to provide a sound basis for asynchronous IPC.
+The complexity of sigaction() is evidence that asynchrony remains
+untamed 40 years on.
 
 ## Contents
 
