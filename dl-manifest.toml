@@ -1,6 +1,6 @@
 # Download all the files in this manifest with:
 #
-# cargo run --bin download-manager -- download download-manifest.toml
+# cargo run -p download-manager -- run dl-manifest.toml
 
 [[downloads]]
 url = "https://releases.ubuntu.com/jammy/ubuntu-22.04.3-desktop-amd64.iso"

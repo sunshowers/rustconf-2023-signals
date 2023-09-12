@@ -20,7 +20,7 @@ use url::Url;
 
 #[derive(Debug, Parser)]
 pub enum App {
-    Download(DownloadArgs),
+    Run(DownloadArgs),
 }
 
 impl App {
@@ -28,7 +28,7 @@ impl App {
         tracing::subscriber::set_global_default(tracing_subscriber::FmtSubscriber::new())
             .expect("tracing subscriber installed");
         match self {
-            App::Download(args) => args.exec().await,
+            App::Run(args) => args.exec().await,
         }
     }
 }
@@ -72,16 +72,17 @@ impl DownloadArgs {
 
         // Start the SIGINT signal handler.
         //
-        // TODO/exercise: In a real application you'll likely want to handle more signals than just
-        // Ctrl-C. Try implementing support for SIGTERM and SIGHUP.
+        // TODO/exercise (easy): In a real application you'll likely want to handle more signals
+        // than just Ctrl-C. Try implementing support for SIGTERM and SIGHUP.
         //
-        // TODO/exercise: As a stretch goal, implement support for SIGTSTP and SIGCONT that also
-        // pauses running timers before. This is a serious effort that will require learning about
-        // several new things. Here are some hints:
+        // TODO/exercise (hard): As a stretch goal, implement support for SIGTSTP and SIGCONT that:
+        // - pauses timers when SIGTSTP is encountered, then stops the current process.
+        // - resumes timers when the process is resumed with SIGCONT.
         //
-        // - You can use libc::kill to send a signal to another process. How can you send a signal
-        //   to yourself?
-        // - Is there a signal that's like SIGTSTP, except it cannot be caught?
+        // Some ideas to get you started:
+        //
+        // - Once you've paused timers you'll also want to stop the current process. How would you
+        //   do this? (Hint: look at man 7 signal for a signal similar to SIGTSTP.)
         // - The libsw library might be of help: https://docs.rs/libsw
         let mut ctrl_c_stream =
             tokio::signal::unix::signal(tokio::signal::unix::SignalKind::interrupt())?;
@@ -147,9 +148,9 @@ impl DownloadArgs {
 
                     // Don't break here -- wait for all the downloads to finish.
 
-                    // TODO/exercise: implement the "double ctrl-c" pattern. The first time Ctrl-C
-                    // is pressed, send a cancellation message and wait for worker tasks to finish.
-                    // The second time, exit immediately.
+                    // TODO/exercise (medium): implement the "double ctrl-c" pattern. The first time
+                    // Ctrl-C is pressed, send a cancellation message and wait for worker tasks to
+                    // finish. The second time, exit immediately.
                 }
             }
         }

@@ -11,11 +11,11 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
 
 ### Personal links
 
-* [My website](https://sunshowers.io/)
-* **Mastodon:** [@rain@hachyderm.io](https://hachyderm.io/@rain)
+* [My website 🌐](https://sunshowers.io/)
+* **Mastodon 🐘:** [@rain@hachyderm.io](https://hachyderm.io/@rain)
 * **Bluesky:** [@sunshowers.io](https://bsky.app/profile/sunshowers.io) --- I'm less active there but happy to answer questions if you tag me there
+* **Email ✉️:** at rustconf23 at sunshowers.io.
 * I do not have an active "X"/Twitter account.
-* Email me at rustconf2023 at sunshowers.io.
 
 ### Other links
 
@@ -37,17 +37,22 @@ untamed 40 years on.
 
 ### download-manager
 
-The `download-manager` directory contains a simple download manager, used as an example throughout
-the presentation. Run it from the root directory with `cargo run -p download-manager -- download
-download-manifest.toml`. This will kick off downloads for two Linux ISOs (see
-`download-manifest.toml`) into the `out/` directory.
+The `download-manager` directory contains a simple download manager, used as an example in the
+presentation. Run it from the root directory with:
+
+```
+cargo run -p download-manager -- run dl-manifest.toml
+```
+
+This will kick off downloads for two Linux ISOs (see `dl-manifest.toml`) into the `out/`
+directory.
 
 Try pressing Ctrl-C while the downloads are happening! You should see the signal handler kick in,
 and log entries saying that the downloads have been marked as interrupted.
 
-There are a number of exercises included in the source code -- search for `TODO/exercise` and try
-them out! Feel free to create forks with solutions, but please **do not send pull requests** with
-solutions.
+There are several exercises included in the source code -- search for `TODO/exercise` and try them
+out! Each exercise has a difficulty level next to it. Feel free to create forks with solutions, but
+please **do not send pull requests** with solutions.
 
 ## Contributing
 

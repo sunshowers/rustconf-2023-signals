@@ -1,9 +1,8 @@
 //! A really basic database that stores its result in memory, using a manager task and handles to
 //! communicate with it.
 //!
-//! TODO/exercise: replace with a JSON file. This works at small scales as long as multiple
-//! executables aren't running at the same time. (This problem can be solved with POSIX advisory
-//! locking, which is outside the scope of this demo.)
+//! A production implementation would likely use an embedded database like SQLite or even a JSON
+//! file.
 
 use std::fmt;
 use tokio::sync::{mpsc, oneshot};
