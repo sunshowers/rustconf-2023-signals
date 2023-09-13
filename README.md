@@ -66,3 +66,5 @@ greatest extent possible, as specified by
 [CC0-1.0](https://creativecommons.org/share-your-work/public-domain/cc0/). (However, note that if
 you distribute a version of the download-manager binary, the licenses of the upstream crates used
 will prevail.)
+
+The slides are under CC BY 4.0.
