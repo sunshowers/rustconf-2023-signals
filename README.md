@@ -22,11 +22,10 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
 * I mentioned towards the beginning of the talk that the terminal sends the SIGINT signal to the process. In reality it's actually a component called the *tty driver*, which is implemented within the kernel, which does so. For more, see this [excellent documentation](https://wezfurlong.org/wezterm/what-is-a-terminal.html#signals) on the WezTerm site.
 * Most of the content of the talk comes from me learning about how to use signals with
   [cargo-nextest](https://nexte.st/). Nextest is a next-generation test runner for Rust with much
-  faster test runs and many other features. Try it out!
+  faster test runs and many other features. Try it out and [star it on GitHub](https://github.com/nextest-rs/nextest)!
 * I'm the maintainer of [a number of Rust crates](https://crates.io/users/sunshowers). If the
   standard library's `Path::to_str` and `Path::display` have ever annoyed you, check out
-  [camino](https://crates.io/crates/camino/) for UTF-8 paths. (The download manager demo uses camino
-  for a smoother experience.)
+  [camino](https://crates.io/crates/camino/) ([GitHub](https://github.com/camino-rs/camino)) for UTF-8 paths. (The download manager demo uses camino.)
 * Doug McIlroy's 2015 [mailing list post about signals](https://www.tuhs.org/pipermail/tuhs/2015-September/007509.html).
   
   > Signal() was there first and foremost to support SIGKILL; it
