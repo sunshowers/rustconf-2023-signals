@@ -282,6 +282,12 @@ async fn download_url_to(
     // 1. A chunk of bytes is received.
     // 2. A cancellation signal is received.
     // 3. The interval above.
+    //
+    // TODO/exercise (medium): implement a timeout using an additional, fourth branch on the
+    // select!. (reqwest also lets you set timeouts via its client/request APIs -- for this
+    // exercise, don't use that functionality.)
+    //
+    // Hint: Look at the tokio::time crate.
     loop {
         tokio::select! {
             res = stream.next() => {
