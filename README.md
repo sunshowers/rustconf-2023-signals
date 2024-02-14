@@ -6,8 +6,8 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
 
 ### The presentation
 
+* [Video of the RustConf talk, on YouTube](https://www.youtube.com/watch?v=zhbkp_Fzqoo)
 * [Slides](https://docs.google.com/presentation/d/e/2PACX-1vQuV0pYyWQulFbnRHfgvtHqQ_ZVyrnkmfQxT0eQfjEpVjnptUIG8uMx9FuUDz3wxtWqVN5QA9C4biZT/pub?start=false&loop=false&delayms=3000), including a bonus section on SIGPIPE that was left out of the talk.
-* Once the presentation is uploaded to YouTube it will be linked here.
 
 ### Personal links
 
