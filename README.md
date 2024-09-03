@@ -7,6 +7,7 @@ These are **supplementary materials** for Rain's RustConf 2023 talk on signal ha
 ### The presentation
 
 * [Video of the RustConf talk, on YouTube](https://www.youtube.com/watch?v=zhbkp_Fzqoo)
+* [Blog post](https://sunshowers.io/posts/beyond-ctrl-c-signals/), a written version of the talk
 * [Slides](https://docs.google.com/presentation/d/e/2PACX-1vQuV0pYyWQulFbnRHfgvtHqQ_ZVyrnkmfQxT0eQfjEpVjnptUIG8uMx9FuUDz3wxtWqVN5QA9C4biZT/pub?start=false&loop=false&delayms=3000), including a bonus section on SIGPIPE that was left out of the talk.
 
 ### Personal links
